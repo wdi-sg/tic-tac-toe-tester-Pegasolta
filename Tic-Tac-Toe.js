@@ -9,7 +9,7 @@ var movesMade = []
 var gameBoard = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 var player = " "
 var turn = 1
-// var restart = 
+// var restart =
 
 // Double confirm logical flow of functions
 function playerRotate () {
@@ -51,6 +51,7 @@ function isGameOver () {
   else {
     return false
   }
+  restart()
 }
 
 function whoWon () {
@@ -58,19 +59,16 @@ function whoWon () {
   if (player === "playerOne") {
     console.log("player one has won")
     alert("Congrats Player One, you've WON!!!! BOOM POW POW!")
-    restart()
     return 1
   }
   else if (player === "playerTwo") {
     console.log("player two has won")
     alert("Congrats Player Two, you've WON!!!! BOOM POW POW!")
-    restart()
     return 2
   }
   else if (player === "draw") {
     console.log("it is a draw")
     alert("You guys are such suckers...")
-    restart()
     return 3
   }
   else {
