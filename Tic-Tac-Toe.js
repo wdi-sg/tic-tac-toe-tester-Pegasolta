@@ -1,6 +1,6 @@
 // Variable Storage
 var movesMade = []
-var gameBoard = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+var gameBoard = [ 0 , 1, 2, 3, 4, 5, 6, 7, 8]
 var player = "playerOne"
 var turn = 1
 
@@ -43,7 +43,6 @@ function isGameOver () {
 }
 
 function whoWon () {
-  console.log("whoWon is run")
   if (movesMade.length%2 !== 0 && movesMade.length !== 9) {
     console.log("player one has won")
     alert("Congrats Player One, you've WON!!!! BOOM POW POW!")
