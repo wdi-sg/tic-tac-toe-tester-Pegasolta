@@ -1,17 +1,9 @@
-//where you write your JS codes
-
-//array to see who has whoWon
-//array to track moves
-//array to see whose turn is it
-
 // Variable Storage
 var movesMade = []
 var gameBoard = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 var player = "playerOne"
 var turn = 1
-// var restart =
 
-// Double confirm logical flow of functions
 function playerRotate () {
   if (turn%2 === 0) {
     player = "playerTwo"
@@ -22,7 +14,6 @@ function playerRotate () {
 }
 
 function isGameOver () {
-  console.log("isGameOver is run")
   if (gameBoard[0] === gameBoard[1] && gameBoard[1] === gameBoard[2]) {
     whoWon()
     return true
@@ -48,10 +39,7 @@ function isGameOver () {
     player = "draw"
     return true
   }
-  else {
-    return false
-  }
-  restart()
+  else return false
 }
 
 function whoWon () {
@@ -96,7 +84,6 @@ function playTurn (index) {
         gameBoard.splice(index, 0, "p2")
       }
       turn++
-      console.log(turn)
       isGameOver()
       return true
     }
