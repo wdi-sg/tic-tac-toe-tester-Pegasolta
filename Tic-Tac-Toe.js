@@ -56,17 +56,17 @@ function isGameOver () {
 
 function whoWon () {
   console.log("whoWon is run")
-  if (player === "playerOne") {
+  if (movesMade.length%2 !== 0 && player !== "draw") {
     console.log("player one has won")
     alert("Congrats Player One, you've WON!!!! BOOM POW POW!")
     return 1
   }
-  else if (player === "playerTwo") {
+  else if (movesMade.length%2 === 0 && turn > 1) {
     console.log("player two has won")
     alert("Congrats Player Two, you've WON!!!! BOOM POW POW!")
     return 2
   }
-  else if (player === "draw") {
+  else if (movesMade.length === 9) {
     console.log("it is a draw")
     alert("You guys are such suckers...")
     return 3
