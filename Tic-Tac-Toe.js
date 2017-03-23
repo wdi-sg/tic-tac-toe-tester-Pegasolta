@@ -68,7 +68,7 @@ function restart () {
     gameBoard = [0, 1, 2, 3, 4, 5, 6, 7, 8]
     movesMade = []
     turn = 1
-    player = " "
+    player = "playerOne"
 }
 
 function playTurn (index) {
