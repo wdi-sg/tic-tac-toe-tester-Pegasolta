@@ -5,26 +5,20 @@ var player = "playerOne"
 var turn = 1
 
 var $button = $("button")
-$button.on("click", restart())
+$button.on("click", restart)
 
 var $grid = $(".grid")
 $grid.on("click", function() {
     var index = $(".grid").index(this)
-    console.log("turn" + turn);
-    playTurn($index)
-    console.log("index" + $index);
-    console.log("player:"+  player);
-    console.log("gameover?"+ isGameOver());
-    if (turn % 2 === 0) {
-        $grid[index].textContent =
-        $(".grid:nth-child(" + $index + 1 + ")").text("X")
-        console.log(document.querySelector(".gameBoard"));
-    } else {
-        $(".grid:nth-child(" + $index + 1 + ")").text("O")
-        console.log(document.querySelector(".gameBoard"));
-    }
-})
 
+    if (turn % 2 === 0) {
+        $grid[index].textContent = "O"
+
+    } else {
+        $grid[index].textContent = "X"
+    }
+    playTurn(index)
+})
 
 function playerRotate() {
     if (turn % 2 === 0) {
@@ -76,12 +70,13 @@ function whoWon() {
 }
 
 function restart() {
-    console.log("restart has run");
-    //insert confirm if want to restart game here
+  console.log("restart has run");
     gameBoard = [0, 1, 2, 3, 4, 5, 6, 7, 8]
     movesMade = []
     turn = 1
     player = "playerOne"
+    console.log(".grid");
+    $(".grid").empty()
 }
 
 function playTurn(index) {
