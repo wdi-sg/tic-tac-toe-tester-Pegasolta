@@ -1,0 +1,10 @@
+h1 {
+  font-family: "quick-sand", sans-serif;
+  
+}
+
+.grid {
+    max-width: 10%;
+    max-height: 10%;
+    border: 5px solid black;
+}
